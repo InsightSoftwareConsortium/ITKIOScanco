@@ -31,7 +31,7 @@
     "@shoelace-style/shoelace": "^2.5.2",
     "@types/node": "^20.2.5",
     "shx": "^0.3.4",
-    "vite": "^4.5.14",
+    "vite": "^5.4.21",
     "vite-plugin-static-copy": "^2.3.2"
   },
   "repository": {
