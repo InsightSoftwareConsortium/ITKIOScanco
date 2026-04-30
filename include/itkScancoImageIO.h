@@ -193,8 +193,7 @@ public:
   void
   SetRescaleUnits(const char * rescaleUnits)
   {
-    std::snprintf(
-      this->m_HeaderData.m_RescaleUnits, sizeof(this->m_HeaderData.m_RescaleUnits), "%s", rescaleUnits);
+    std::snprintf(this->m_HeaderData.m_RescaleUnits, sizeof(this->m_HeaderData.m_RescaleUnits), "%s", rescaleUnits);
     this->Modified();
   }
 
@@ -299,8 +298,7 @@ public:
   void
   SetCreationDate(const char * creationDate)
   {
-    std::snprintf(
-      this->m_HeaderData.m_CreationDate, sizeof(this->m_HeaderData.m_CreationDate), "%s", creationDate);
+    std::snprintf(this->m_HeaderData.m_CreationDate, sizeof(this->m_HeaderData.m_CreationDate), "%s", creationDate);
     this->Modified();
   }
 
@@ -312,10 +310,8 @@ public:
   void
   SetModificationDate(const char * modificationDate)
   {
-    std::snprintf(this->m_HeaderData.m_ModificationDate,
-                  sizeof(this->m_HeaderData.m_ModificationDate),
-                  "%s",
-                  modificationDate);
+    std::snprintf(
+      this->m_HeaderData.m_ModificationDate, sizeof(this->m_HeaderData.m_ModificationDate), "%s", modificationDate);
     this->Modified();
   }
 

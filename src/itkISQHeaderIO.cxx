@@ -413,9 +413,8 @@ ISQHeaderIO::ReadExtendedHeader(const char * buffer, unsigned long length)
   if (calHeader && calHeaderSize >= 1024)
   {
     // Read Calibration data from header
-    StripString(this->m_HeaderData->m_CalibrationData,
-                calHeader->m_CalibrationData,
-                ScancoHeaderField::CalibrationDataDiskWidth);
+    StripString(
+      this->m_HeaderData->m_CalibrationData, calHeader->m_CalibrationData, ScancoHeaderField::CalibrationDataDiskWidth);
     // std::string calFile(h + 112, 256);
     // std::string s3(h + 376, 256);
     this->m_HeaderData->m_RescaleType = DecodeInt(calHeader->m_RescaleType);

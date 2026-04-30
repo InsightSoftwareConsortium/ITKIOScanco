@@ -359,8 +359,7 @@ ScancoImageIO::SetHeaderFromMetaDataDictionary()
   }
   if (ExposeMetaData<std::string>(metaData, "PatientName", stringMeta))
   {
-    std::snprintf(
-      this->m_HeaderData.m_PatientName, sizeof(this->m_HeaderData.m_PatientName), "%s", stringMeta.c_str());
+    std::snprintf(this->m_HeaderData.m_PatientName, sizeof(this->m_HeaderData.m_PatientName), "%s", stringMeta.c_str());
   }
 
   ExposeMetaData<int>(metaData, "PatientIndex", this->m_HeaderData.m_PatientIndex);
@@ -373,10 +372,8 @@ ScancoImageIO::SetHeaderFromMetaDataDictionary()
   }
   if (ExposeMetaData<std::string>(metaData, "ModificationDate", stringMeta))
   {
-    std::snprintf(this->m_HeaderData.m_ModificationDate,
-                  sizeof(this->m_HeaderData.m_ModificationDate),
-                  "%s",
-                  stringMeta.c_str());
+    std::snprintf(
+      this->m_HeaderData.m_ModificationDate, sizeof(this->m_HeaderData.m_ModificationDate), "%s", stringMeta.c_str());
   }
 
   ExposeMetaData<double>(metaData, "SliceThickness", this->m_HeaderData.m_SliceThickness);
