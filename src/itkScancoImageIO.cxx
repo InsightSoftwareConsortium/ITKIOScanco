@@ -49,7 +49,6 @@
 namespace itk
 {
 ScancoImageIO::ScancoImageIO()
-
 {
   this->m_FileType = IOFileEnum::Binary;
   this->m_ByteOrder = IOByteOrderEnum::LittleEndian;
